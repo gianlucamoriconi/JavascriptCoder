@@ -6,6 +6,10 @@ body{
   background-color: #ffeee4;
 }
 
+a{
+ text-decoration: unset;
+}
+
 #hello-section{
   background: url(./media/images/tasty-sandwich.jpg);
   background-size: cover;
@@ -13,6 +17,10 @@ body{
 
 .h-90{
   height: 90%;
+}
+
+.min-w-350{
+  min-width: 350px;
 }
 
 .vh-90{
@@ -51,6 +59,7 @@ body{
   color: #FFFFFF;
   background-color: #242424;
   border-color: #242424;
+  letter-spacing: 1.2px;
 }
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus{
@@ -128,14 +137,14 @@ input.username {
   border-style: solid;
   border-radius: 6px;
   border-width: 1px;
-  min-width: 100px;
-  max-width: 100%;
+  max-width: 306px;
   padding: 10px;
 }
 
 
 #userName {
     transition: 0.3s;
+    border: 2px solid transparent;
     border-radius: 10px;
     padding: 4px;
 }

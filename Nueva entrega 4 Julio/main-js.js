@@ -5,13 +5,13 @@
 let sandwichFinal = [];
 
 /*Ingredientes*/
-let pan = ["Ciabatta", "Baguette", "Focaccia"];
-let carnes = ["Asado", "Vacío", "Bondiola", "Pollo"];
-let vegetales = ["Lechuga", "Tomate", "Berenjena asada", "Cebolla cruda", "Cebolla caramelizada"];
-let quesos = ["Cheddar", "Provoleta", "Dambo"];
-let salsaCondimentos = ["Sal", "Limón", "Aceite de oliva", "Mayonesa", "Ketchup"];
-let botonOrdenar = document.getElementById("orderOne");
-let botonVerOrden = document.getElementById("seeOrder");
+// let pan = ["Ciabatta", "Baguette", "Focaccia"];
+// let carnes = ["Asado", "Vacío", "Bondiola", "Pollo"];
+// let vegetales = ["Lechuga", "Tomate", "Berenjena asada", "Cebolla cruda", "Cebolla caramelizada"];
+// let quesos = ["Cheddar", "Provoleta", "Dambo"];
+// let salsaCondimentos = ["Sal", "Limón", "Aceite de oliva", "Mayonesa", "Ketchup"];
+// let botonOrdenar = document.getElementById("orderOne");
+// let botonVerOrden = document.getElementById("seeOrder");
 
 /*Programa para armar sandwich*/
 
@@ -27,7 +27,7 @@ let Ingredientes = [
   ingrediente: "Carnes",
   aceptaVariasOpciones: false,
   omitible: true,
-  opciones: ["asado", "vacio", "bondiola", "pollo"],
+  opciones: ["asado", "vacío", "bondiola", "pollo"],
   tipo: "carne"
 },
 {

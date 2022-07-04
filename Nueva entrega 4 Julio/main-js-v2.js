@@ -110,6 +110,7 @@ itemInGrid.forEach(item => {
 let userNameSaved = localStorage.getItem('userName');
 
 function putName(){
+  let userNameSaved = localStorage.getItem('userName');
   let newSpan = document.createElement("span");
   newSpan.classList.add("username", "color-light", "fw-bold");
   newSpan.setAttribute("id", "userName");
@@ -130,34 +131,71 @@ let saveName = function saveName(){
 }
 
 
-document.addEventListener('click', function(event) {
-  let inputName = document.querySelector("input#userName");
-  if (inputName) {
-    let clickOnInput = inputName.contains(event.target);
 
-    if (!clickOnInput) {
-      putName();
-    }
-  }
-
-});
-
-
-let start = document.getElementById("start")
+let start = document.getElementById("start");
 start.addEventListener('click', saveName);
 
 
 //Si existe y quiere cambiarlo, podrá hacerlo haciendo click sobre el nombre
 let editName = function editName(){
   console.log("Click para editName funciona");
-  let currentUserName = document.getElementById("userName").innerText;
-  let newInput = document.createElement("input");
+  var currentUserName = document.getElementById("userName").innerText;
+  var newInput = document.createElement("input");
   newInput.classList.add("username", "color-light", "fw-bold");
   newInput.setAttribute("id", "userName");
   newInput.value = currentUserName;
-  document.getElementById("userName").replaceWith(newInput);
+  document.querySelector("span#userName").replaceWith(newInput);
+  document.querySelector("input#userName").click();
 }
-document.getElementById("userName").addEventListener('click', editName);
+
+if (document.querySelector("span#userName")) {
+  document.querySelector("span#userName").addEventListener('click', editName);
+}
 
 
-//Si está el input activo y hace click fuera de él, quitamos el input y dejamos el nombre
+/*Ver seleccion*/
+let saveSelection = document.getElementById("save-selection");
+
+sandwichSaved = [];
+
+let saveSelectionFunction = function saveSelection(){
+  if (sandwichSaved.length >= 1) {
+    for (let i = sandwichSaved.length; i > 0; i--) {
+      sandwichSaved.pop();
+    }
+  }
+
+  let optionsSelected = document.querySelectorAll(".container-items input:checked");
+  if (optionsSelected.length < 2) {
+    alert("¡Todavía te falta completar el sandiwich!");
+  }
+  else {
+    for (var i = 0; i < optionsSelected.length; i++) {
+      let name = optionsSelected[i].getAttribute("id");
+      let category = optionsSelected[i].getAttribute("category");
+      sandwichSaved.push(name);
+      console.log(category + ": "+name);
+    }
+
+    console.log(sandwichSaved);
+    localStorage.setItem('sandwichSaved', JSON.stringify(sandwichSaved));
+  }
+}
+
+saveSelection.addEventListener('click', saveSelectionFunction);
+
+let orderExist = localStorage.getItem('sandwichSaved');
+localStorage.setItem('orderExist', 'hola');
+
+
+if (orderExist !== "null") {
+  let orderExistButton = document.createElement("a");
+  let iconClipboard = document.createElement("i");
+  iconClipboard.classList.add("fa-solid", "fa-clipboard-list", "ms-2");
+  orderExistButton.classList.add("color-light", "fs-6", "btn", "btn-primary", "mt-3", "ms-2");
+  orderExistButton.innerText = "Ver mi orden en progreso";
+  orderExistButton.setAttribute("href","./success.html");
+  orderExistButton.append(iconClipboard);
+
+  document.getElementById("actions-home").append(orderExistButton);
+}

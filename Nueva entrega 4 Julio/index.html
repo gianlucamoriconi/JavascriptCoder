@@ -16,20 +16,21 @@
   </head>
   <body>
     <main>
-        <div id="hello-section" class="w-100 p-5 mb-5 vh-100">
+        <div id="hello-section" class="w-100 p-5 vh-100">
           <div class="col-12 h-100 ps-5">
-            <h1 class="color-light fw-bold fs-4 mb-5">My Sandwich</h1>
+            <a href="./index.html"><h1 class="color-light fw-bold fs-4 mb-5">My Sandwich</h1></a>
             <div class="container-hello mt-35vh">
-              <h2 class="color-light fw-bold">¡Hola, <input id="userName" class="username" type="text" name="" value="" placeholder="Ingresa tu nombre"></input>!</h2>
-
-              <a id="start" href="#menu" class="color-light fs-6 btn btn-primary mt-3">Empezar</a>
+              <h2 class="color-light fw-bold">¡Hola, <input id="userName" class="username fw-bold" type="text" name="" value="" placeholder="Ingresa tu nombre"></input>!</h2>
+              <div id="actions-home">
+                <a id="start" href="#menu" class="color-light fs-6 btn btn-primary mt-3">Empezar</a>
+              </div>
             </div>
           </div>
         </div>
 
 
         <!-- Nueva estructura -->
-        <div id="menu" class="d-flex main-box p-5">
+        <div id="menu" class="d-flex main-box p-5 mt-5">
           <div id="pickingTable" class="h-100 col-8 p-3 rounded-3">
             <h3 class="mb-5 fs-5 fw-bold">Elegí tus ingredientes</h3>
             <div class="p-2 overflow-hidden">
@@ -88,7 +89,7 @@
               </section>-->
             </div>
             <div class="buttons-order text-center">
-              <a id="save-selection" class="btn btn-primary fw-light shadow">Guardar sandwich</a>
+              <a id="save-selection" class="btn btn-primary fw-light shadow">Pedir sandwich</a>
             </div>
 
           </div>
