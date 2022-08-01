@@ -150,7 +150,7 @@ saveSelection.addEventListener('click', saveSelectionFunction);
 
 let orderExist = localStorage.getItem('sandwichSaved');
 
-if (orderExist != "null") {
+if (orderExist != null) {
   let orderExistButton = document.createElement("a");
   let iconClipboard = document.createElement("i");
   iconClipboard.classList.add("fa-solid", "fa-clipboard-list", "ms-2");
