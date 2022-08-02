@@ -36,12 +36,12 @@ function selection(name, price, category){
   newItem.setAttribute('data-price', price);
   newItem.innerHTML = '<p class="fs-7 fw-bold mb-0">'+name+'</p><p class="fs-7 fw-light mb-0 text-center">$'+price+'</p>';
   newItem.classList.add('item', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-3', 'fs-7');
-  document.querySelector(".container-order").append(newItem);
+  document.querySelector(".content-order").append(newItem);
 }
 
 function seeSelection(){
   if (document.querySelectorAll(".content-order .item")) {
-    let itemsInList = document.querySelectorAll(".container-order .item");
+    let itemsInList = document.querySelectorAll(".content-order .item");
     for (var i = 0; i < itemsInList.length; i++) {
       itemsInList[i].remove();
     }
