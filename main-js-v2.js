@@ -28,6 +28,8 @@ function createItemInGrid(uniqueOrMulti, name, price, category, input, unique){
 
 }
 
+/*Suma de carrito*/
+
 let totalPriceOrder = 0;
 function sumOfItems(){
   if (document.querySelectorAll("#myOrder .item")) {
@@ -35,14 +37,13 @@ function sumOfItems(){
 
     itemPriceInOrder.forEach((item) => {
       itemPriceInOrderS = Number(item.getAttribute("data-price"));
-      console.log(itemPriceInOrderS);
+      totalPriceOrder = 0;
       totalPriceOrder = totalPriceOrder + itemPriceInOrderS;
     });
 
     document.querySelector(".cart-total").innerText = "$" + totalPriceOrder;
   }
 }
-
 /*Ver selección del usuario en la columna derecha*/
 
 function selection(name, price, category){
