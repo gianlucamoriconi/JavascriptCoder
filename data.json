@@ -12,12 +12,12 @@
       {
         "name": "baguette",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "focaccia",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       }
     ],
     "tipo": "pan"
@@ -30,22 +30,22 @@
       {
         "name": "asado",
         "price": 800,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "vacío",
         "price": 800,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "bondiola",
         "price": 800,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "pollo",
         "price": 400,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       }
     ],
     "tipo": "carne"
@@ -58,17 +58,17 @@
       {
         "name": "cheddar",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "provoleta",
         "price": 120,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "dambo",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       }
     ],
     "tipo": "queso"
@@ -81,42 +81,42 @@
       {
         "name": "sal",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "limón",
         "price": 120,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "aceite de oliva",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "mayonesa",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "ketchup",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "mostaza dulce",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "salsa criolla",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "chimichurri",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       }
     ],
     "tipo": "salsa-condimento"
@@ -129,57 +129,57 @@
       {
         "name": "lechuga",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "tomate",
         "price": 120,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "aceitunas negras",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "aceitunas verdes",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "pepino",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "pepinillo en vinagre",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "rúcula",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "repollo",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "tomate cherry",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "huevo duro",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "huevo frito",
         "price": 100,
-        "imgUrl": "./media/images/ciabatta.jpg"
+        "imgUrl": "./media/images/sandwich-loading.jpg"
       }
     ],
     "tipo": "vegetales-y-otros"
