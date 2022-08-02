@@ -1,4 +1,3 @@
-
 let orderExist = localStorage.getItem('sandwichSaved');
 let orderSavedParsed = JSON.parse(orderExist);
 
@@ -22,6 +21,6 @@ for (var i = 0; i < orderSavedParsed.items.length; i++) {
 //Precio en orden guardada
 let totalPriceInSuccessOrder = Number(orderSavedParsed.totalPrice);
 let totalFooter = document.createElement("div");
-totalFooter.classList.add("footer-cart");
-totalFooter.innerHTML = `<h4 class="title-footer-cart col-6">Total:</h4><span class="cart-total col-6">$${totalPriceInSuccessOrder}</span>`;
+totalFooter.classList.add("footer-cart", "d-flex", "pt-4", "pb-2", "ps-2", "pe-2");
+totalFooter.innerHTML = `<h5 class="title-footer-cart col-6">Total:</h5><span class="cart-total col-6 text-end">$${totalPriceInSuccessOrder}</span>`;
 document.getElementById("orderSaved").append(totalFooter);
