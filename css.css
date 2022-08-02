@@ -202,3 +202,9 @@ input.username {
   bottom: 30px;
   right: 30px;
 }
+
+.img-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 3px;
+}
