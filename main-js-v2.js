@@ -303,7 +303,7 @@ function deleteItemFromCart(itemId){
 const observer = new MutationObserver((mutation) => {
    if (mutation) {
      setTimeout(() => {
-       deleteClick()();
+       deleteClick();
      });
    }
  });
