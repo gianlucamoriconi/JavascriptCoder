@@ -156,3 +156,7 @@ input.username {
     border-radius: 10px;
     transition: 0.3s;
 }
+
+.footer-cart {
+    border-top: 1px solid #00000036;
+}
