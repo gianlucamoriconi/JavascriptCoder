@@ -22,5 +22,5 @@ for (var i = 0; i < orderSavedParsed.items.length; i++) {
 let totalPriceInSuccessOrder = Number(orderSavedParsed.totalPrice);
 let totalFooter = document.createElement("div");
 totalFooter.classList.add("footer-cart", "d-flex", "pt-4", "pb-2", "ps-2", "pe-2");
-totalFooter.innerHTML = `<h5 class="title-footer-cart col-6">Total:</h5><span class="cart-total col-6 text-end">$${totalPriceInSuccessOrder}</span>`;
+totalFooter.innerHTML = `<h5 class="title-footer-cart col-6 text-start">Total:</h5><span class="cart-total col-6 text-end">$${totalPriceInSuccessOrder}</span>`;
 document.getElementById("orderSaved").append(totalFooter);
