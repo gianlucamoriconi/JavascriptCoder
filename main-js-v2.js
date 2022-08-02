@@ -164,7 +164,7 @@ let saveSelectionFunction = function saveSelection(){
   }
   else {
     for (var i = 0; i < optionsSelected.length; i++) {
-      let name = optionsSelected[i].getAttribute("id");
+      let name = optionsSelected[i].getAttribute("name");
       let category = optionsSelected[i].getAttribute("category");
       sandwichSaved.push(name);
     }
