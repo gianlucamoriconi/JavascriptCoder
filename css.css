@@ -108,6 +108,12 @@ a{
   display: none;
 }
 
+.delete-icon {
+    width: 30px;
+    padding-left: 15px;
+    margin-top: -1px;
+}
+
 .item.selected{
   background: #0f5132!important;
   color: white;
