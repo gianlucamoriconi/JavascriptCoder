@@ -1,5 +1,4 @@
 
-
 /*Variables globales*/
 
 let itemToDelete = {};
@@ -9,7 +8,7 @@ let itemToDelete = {};
 
 /*Funcion creadora de items en menú*/
 
-function createItemInGrid(uniqueOrMulti, name, price, category, input, unique){
+function createItemInGrid(name, price, category, input, unique){
   let nameParsed = name.replace(/ /g, "-");
   let newLabel = document.createElement('label');
   newLabel.setAttribute('for', nameParsed);
@@ -27,7 +26,7 @@ function createItemInGrid(uniqueOrMulti, name, price, category, input, unique){
   Ejemplo, no se pueden elegir dos tipos de pan para el mismo sanguche, entonces haremos que los
   inputs de pan lleven todos el mismo "name" otorgandole como valor su propiedad "tipo" que es "Pan".
   */
-  newInput.setAttribute('name', uniqueOrMulti);
+  newInput.setAttribute('name', name);
 
   //El atributo category lo inventamos para categorizar los inputs
   //nos servirá para armar la orden.
@@ -246,12 +245,12 @@ const getInfo = () => {
           if (data[i].aceptaVariasOpciones == false) {
             let typeOfInput = "checkbox";
             let unique = "true";
-            createItemInGrid(typeOfIngredient, nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique);
+            createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique);
           }
           else if (data[i].aceptaVariasOpciones == true) {
             let typeOfInput = "checkbox";
             let unique = "false";
-            createItemInGrid(nameOfIngredient, nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique);
+            createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique);
           }
         }
       }
