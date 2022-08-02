@@ -1,5 +1,4 @@
 
-
 /*Variables globales*/
 
 let itemToDelete = {};
@@ -13,7 +12,7 @@ function createItemInGrid(uniqueOrMulti, name, price, category, input, unique){
   let nameParsed = name.replace(/ /g, "-");
   let newLabel = document.createElement('label');
   newLabel.setAttribute('for', nameParsed);
-  newLabel.innerHTML = '<p class="fs-7 fw-bold mb-0">'+name+'</p><p class="fs-7 fw-light mb-0 text-center">$'+price+'</p>';
+  newLabel.innerHTML = '<p class="item-name fs-7 fw-bold mb-0">'+name+'</p><p class="fs-7 fw-light mb-0 text-center">$'+price+'</p>';
   newLabel.classList.add('item', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-3', 'fs-7');
   newLabel.style.cursor = 'pointer';
   let newInput = document.createElement('input');
@@ -77,7 +76,7 @@ function seeSelection(){
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
   for (var i = 0; i < optionsSelected.length; i++) {
-    let name = optionsSelected[i].getAttribute("id");
+    let name = optionsSelected[i].closest("label").querySelector("item-name").innerText;
     let price = optionsSelected[i].getAttribute("data-price");
     let category = optionsSelected[i].getAttribute("category");
     selection(name, price, category);
