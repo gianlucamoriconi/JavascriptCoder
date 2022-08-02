@@ -108,7 +108,25 @@ a{
   display: none;
 }
 
-.delete-icon {
+#myOrder .item{
+   border: 1px solid transparent;
+   transition: 0.5s;
+  overflow: hidden;
+}
+
+#myOrder .item:hover{
+    border: 1px solid red;
+    transition: 0.5s;
+}
+
+#myOrder .item:hover .delete-icon{
+    margin-right: 0px;
+}
+
+#myOrder .delete-icon {
+  cursor: pointer;
+    margin-right: -31px;
+    transition: 0.5s;
     width: 30px;
     padding-left: 15px;
     margin-top: -1px;
@@ -165,25 +183,4 @@ input.username {
 
 .footer-cart {
     border-top: 1px solid #00000036;
-}
-
-#myOrder .item{
-   border: 1px solid transparent;
-   transition: 0.5s;
-  overflow: hidden;
-}
-
-#myOrder .item:hover{
-    border: 1px solid red;
-    transition: 0.5s;
-}
-
-#myOrder .item:hover .delete-icon{
-    margin-right: 0px;
-}
-
-.delete-icon {
-  cursor: pointer;
-    margin-right: -100px;
-    transition: 0.5s;
 }
