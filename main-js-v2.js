@@ -280,9 +280,6 @@ const getInfo = () => {
 start.addEventListener('click', getInfo);
 
 
-
-let itemToDelete = document.querySelectorAll(".delete-icon");
-
 itemToDelete.forEach((itemDel) => {
   itemDel.addEventListener('click', function(){
     let id = itemDel.closest(".item").getAttribute("id");
