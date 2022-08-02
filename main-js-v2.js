@@ -10,14 +10,15 @@ let itemToDelete = {};
 /*Funcion creadora de items en menú*/
 
 function createItemInGrid(uniqueOrMulti, name, price, category, input, unique){
+  let nameParsed = name.replace(/ /g, "-");
   let newLabel = document.createElement('label');
-  newLabel.setAttribute('for', name);
+  newLabel.setAttribute('for', nameParsed);
   newLabel.innerHTML = '<p class="fs-7 fw-bold mb-0">'+name+'</p><p class="fs-7 fw-light mb-0 text-center">$'+price+'</p>';
   newLabel.classList.add('item', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-3', 'fs-7');
   newLabel.style.cursor = 'pointer';
   let newInput = document.createElement('input');
   newInput.setAttribute('type', input);
-  newInput.setAttribute('id', name);
+  newInput.setAttribute('id', nameParsed);
   newInput.setAttribute('data-price', price);
   newInput.setAttribute('unique', unique);
 
