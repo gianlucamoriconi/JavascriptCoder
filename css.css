@@ -208,3 +208,10 @@ input.username {
     height: auto;
     border-radius: 3px;
 }
+
+
+.img-item-cart img {
+    width: 55px;
+    height: auto;
+}
+
