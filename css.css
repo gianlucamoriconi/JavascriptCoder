@@ -195,3 +195,10 @@ input.username {
 .footer-cart {
     border-top: 1px solid #00000036;
 }
+
+#cart-button{
+  position: fixed;
+  z-index: 999;
+  bottom: 30px;
+  right: 30px;
+}
