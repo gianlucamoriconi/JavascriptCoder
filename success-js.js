@@ -1,4 +1,7 @@
 
+let orderExist = localStorage.getItem('sandwichSaved');
+let orderSavedParsed = JSON.parse(orderExist);
+
 
 function ingredientsInOrder(name){
   let newItem = document.createElement('div');
@@ -8,11 +11,17 @@ function ingredientsInOrder(name){
   document.getElementById("orderSaved").append(newItem);
 }
 
-let orderExist = localStorage.getItem('sandwichSaved');
 
-let orderSavedParsed = JSON.parse(orderExist);
-for (var i = 0; i < orderSavedParsed.length; i++) {
-  let name = orderSavedParsed[i];
+
+for (var i = 0; i < orderSavedParsed.items.length; i++) {
+  let name = orderSavedParsed.items[i];
   // let category = orderSavedParsed[i].getAttribute("category");
   ingredientsInOrder(name);
 }
+
+//Precio en orden guardada
+let totalPriceInSuccessOrder = Number(orderSavedParsed.totalPrice);
+let totalFooter = document.createElement("div");
+totalFooter.classList.add("footer-cart");
+totalFooter.innerHTML = `<h4 class="title-footer-cart col-6">Total:</h4><span class="cart-total col-6">$${totalPriceInSuccessOrder}</span>`;
+document.getElementById("orderSaved").append(totalFooter);
