@@ -134,6 +134,7 @@ a{
 }
 
 #myOrder .delete-icon {
+  fill: red;
   cursor: pointer;
     margin-right: -31px;
     transition: 0.5s;
