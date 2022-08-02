@@ -1,4 +1,11 @@
 
+/*Variables globales*/
+
+let itemToDelete = {};
+
+
+
+
 /*Funcion creadora de items en menú*/
 
 function createItemInGrid(uniqueOrMulti, name, price, category, input, unique){
@@ -72,6 +79,7 @@ function seeSelection(){
     let price = optionsSelected[i].getAttribute("data-price");
     let category = optionsSelected[i].getAttribute("category");
     selection(name, price, category);
+    itemToDelete = document.querySelectorAll(".delete-icon");
   }
   sumOfItems();
 }
@@ -270,3 +278,22 @@ const getInfo = () => {
 
 
 start.addEventListener('click', getInfo);
+
+
+
+let itemToDelete = document.querySelectorAll(".delete-icon");
+
+itemToDelete.forEach((itemDel) => {
+  itemDel.addEventListener('click', function(){
+    let id = itemDel.closest(".item").getAttribute("id");
+    deleteItemFromCart(id);
+  });
+});
+
+function deleteItemFromCart(itemId){
+  document.querySelector(`#pickingTable .item input#${itemId}`).checked = false;
+  document.querySelector(`#pickingTable .item input#${itemId}`).closest("label").classList.remove('selected');
+  seeSelection();
+  sumOfItems();
+}
+
