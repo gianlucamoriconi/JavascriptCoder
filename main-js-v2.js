@@ -263,3 +263,18 @@ function sumOfItems(){
     });
   }
 }
+
+let totalPriceOrder = 0;
+function sumOfItems(){
+  if (document.querySelectorAll("#myOrder .item")) {
+    let itemPriceInOrder = document.querySelectorAll("#myOrder .item");
+
+    itemPriceInOrder.forEach((item) => {
+      itemPriceInOrderS = Number(item.getAttribute("data-price"));
+      console.log(itemPriceInOrderS);
+      totalPriceOrder = totalPriceOrder + itemPriceInOrderS;
+    });
+
+    document.querySelector(".cart-total").innerText = "$" + totalPriceOrder;
+  }
+}
