@@ -52,7 +52,7 @@ function selection(name, price, category){
   let newItem = document.createElement('div');
   newItem.setAttribute('id', name);
   newItem.setAttribute('data-price', price);
-  newItem.innerHTML = '<p class="col-8 fs-7 fw-bold mb-0">'+name+'</p><p class="item-price d-flex justify-content-end col-4 fs-7 fw-light mb-0">$'+price+'</p>';
+  newItem.innerHTML = '<p class="col-8 fs-7 fw-bold mb-0">'+name+'</p><p class="item-price d-flex justify-content-end col-4 fs-7 fw-light mb-0">$'+price+'</p><a><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" class="delete-icon"></a>';
   newItem.classList.add('item', 'd-flex', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-3', 'fs-7');
   document.querySelector(".content-order").append(newItem);
   sumOfItems();
