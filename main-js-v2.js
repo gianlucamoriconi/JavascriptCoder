@@ -40,7 +40,7 @@ function selection(name, price, category){
 }
 
 function seeSelection(){
-  if (document.querySelectorAll(".container-order .item")) {
+  if (document.querySelectorAll(".content-order .item")) {
     let itemsInList = document.querySelectorAll(".container-order .item");
     for (var i = 0; i < itemsInList.length; i++) {
       itemsInList[i].remove();
