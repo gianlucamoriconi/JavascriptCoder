@@ -108,6 +108,16 @@ a{
   display: none;
 }
 
+#pickingTable .item{
+    border: 1px solid transparent;
+    transition: 0.5s;
+}
+
+#pickingTable .item:hover{
+    border: 1px solid #0f5132;
+    transition: 0.5s;
+}
+
 #myOrder .item{
    border: 1px solid transparent;
    transition: 0.5s;
