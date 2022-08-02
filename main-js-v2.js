@@ -28,6 +28,21 @@ function createItemInGrid(uniqueOrMulti, name, price, category, input, unique){
 
 }
 
+let totalPriceOrder = 0;
+function sumOfItems(){
+  if (document.querySelectorAll("#myOrder .item")) {
+    let itemPriceInOrder = document.querySelectorAll("#myOrder .item");
+
+    itemPriceInOrder.forEach((item) => {
+      itemPriceInOrderS = Number(item.getAttribute("data-price"));
+      console.log(itemPriceInOrderS);
+      totalPriceOrder = totalPriceOrder + itemPriceInOrderS;
+    });
+
+    document.querySelector(".cart-total").innerText = "$" + totalPriceOrder;
+  }
+}
+
 /*Ver selección del usuario en la columna derecha*/
 
 function selection(name, price, category){
@@ -37,6 +52,7 @@ function selection(name, price, category){
   newItem.innerHTML = '<p class="fs-7 fw-bold mb-0">'+name+'</p><p class="fs-7 fw-light mb-0 text-center">$'+price+'</p>';
   newItem.classList.add('item', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-3', 'fs-7');
   document.querySelector(".content-order").append(newItem);
+  sumOfItems();
 }
 
 function seeSelection(){
@@ -251,30 +267,3 @@ const getInfo = () => {
 
 
 start.addEventListener('click', getInfo);
-
-
-
-function sumOfItems(){
-  if (document.querySelectorAll("#myOrder .item")) {
-    let itemPriceInOrder = document.querySelectorAll("#myOrder .item");
-    itemPriceInOrder.forEach((item) => {
-      itemPriceInOrderS = item.getAttribute("data-price");
-      console.log(itemPriceInOrderS);
-    });
-  }
-}
-
-let totalPriceOrder = 0;
-function sumOfItems(){
-  if (document.querySelectorAll("#myOrder .item")) {
-    let itemPriceInOrder = document.querySelectorAll("#myOrder .item");
-
-    itemPriceInOrder.forEach((item) => {
-      itemPriceInOrderS = Number(item.getAttribute("data-price"));
-      console.log(itemPriceInOrderS);
-      totalPriceOrder = totalPriceOrder + itemPriceInOrderS;
-    });
-
-    document.querySelector(".cart-total").innerText = "$" + totalPriceOrder;
-  }
-}
