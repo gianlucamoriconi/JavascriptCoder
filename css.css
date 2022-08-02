@@ -166,3 +166,22 @@ input.username {
 .footer-cart {
     border-top: 1px solid #00000036;
 }
+
+#myOrder .item{
+   border: 1px solid transparent;
+   transition: 0.5s;
+}
+
+#myOrder .item:hover{
+    border: 1px solid red;
+    transition: 0.5s;
+}
+
+#myOrder .item:hover .delete-icon{
+    margin-right: 0px;
+}
+
+.delete-icon {
+    margin-right: -100px;
+    transition: 0.5s;
+}
