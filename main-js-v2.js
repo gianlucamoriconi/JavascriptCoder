@@ -50,6 +50,7 @@ function sumOfItems(){
     });
 
     document.querySelector(".cart-total").innerText = "$" + totalPriceOrder;
+    document.querySelector(".cart-total").setAttribute("total-price", totalPriceOrder);
   }
 }
 
@@ -148,7 +149,10 @@ if (document.querySelector("span#userName")) {
 /*Ver seleccion*/
 let saveSelection = document.getElementById("save-selection");
 
-sandwichSaved = [];
+sandwichSaved = {
+  items: [],
+  totalPrice: []
+};
 
 let saveSelectionFunction = function saveSelection(){
   if (sandwichSaved.length >= 1) {
@@ -161,17 +165,24 @@ let saveSelectionFunction = function saveSelection(){
   if (optionsSelected.length < 2) {
     swal("Ey!", "Todavía te falta completar el sandiwich", "error");
   }
+
   else {
     for (var i = 0; i < optionsSelected.length; i++) {
       let name = optionsSelected[i].getAttribute("name");
       let category = optionsSelected[i].getAttribute("category");
-      sandwichSaved.push(name);
-    }
+      sandwichSaved.items.push(name);
+  }
 
-    console.log(sandwichSaved);
-    localStorage.setItem('sandwichSaved', JSON.stringify(sandwichSaved));
-    saveName();
-    let goToOrder = window.location.href = "./success.html";
+  //Guardamos el precio total de la orden
+  let totalPrice = document.querySelector("#myOrder .cart-total").getAttribute("total-price");
+  sandwichSaved.totalPrice.push(totalPrice);
+
+  //Guardamos los items elegidos
+  localStorage.setItem('sandwichSaved', JSON.stringify(sandwichSaved));
+  saveName();
+
+  //llevamos a la página de success
+  let goToOrder = window.location.href = "./success.html";
   }
 }
 
