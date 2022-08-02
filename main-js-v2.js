@@ -1,4 +1,5 @@
 
+
 /*Variables globales*/
 
 let itemToDelete = {};
@@ -279,13 +280,18 @@ const getInfo = () => {
 
 start.addEventListener('click', getInfo);
 
+/*Borrar item del carrito*/
 
-itemToDelete.forEach((itemDel) => {
-  itemDel.addEventListener('click', function(){
-    let id = itemDel.closest(".item").getAttribute("id");
-    deleteItemFromCart(id);
-  });
-});
+function deleteClick(){
+  if (itemToDelete == document.querySelectorAll(".delete-icon")) {
+    itemToDelete.forEach((itemDel) => {
+      itemDel.addEventListener('click', function(){
+        let id = itemDel.closest(".item").getAttribute("id");
+        deleteItemFromCart(id);
+      });
+    });
+  }
+}
 
 function deleteItemFromCart(itemId){
   document.querySelector(`#pickingTable .item input#${itemId}`).checked = false;
@@ -294,3 +300,14 @@ function deleteItemFromCart(itemId){
   sumOfItems();
 }
 
+const observer = new MutationObserver((mutation) => {
+   if (mutation) {
+     setTimeout(() => {
+       deleteClick()();
+     });
+   }
+ });
+ observer.observe(document.querySelector("#myOrder"), {
+   subtree: true,
+   childList: true,
+ });
