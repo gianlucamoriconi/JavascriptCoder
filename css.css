@@ -183,6 +183,7 @@ input.username {
 }
 
 .delete-icon {
+  cursor: pointer;
     margin-right: -100px;
     transition: 0.5s;
 }
