@@ -35,15 +35,17 @@ function sumOfItems(){
   if (document.querySelectorAll("#myOrder .item")) {
     let itemPriceInOrder = document.querySelectorAll("#myOrder .item");
 
+    totalPriceOrder = 0;
     itemPriceInOrder.forEach((item) => {
       itemPriceInOrderS = Number(item.getAttribute("data-price"));
-      totalPriceOrder = 0;
       totalPriceOrder = totalPriceOrder + itemPriceInOrderS;
     });
 
     document.querySelector(".cart-total").innerText = "$" + totalPriceOrder;
   }
 }
+
+
 /*Ver selección del usuario en la columna derecha*/
 
 function selection(name, price, category){
