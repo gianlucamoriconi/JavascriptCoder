@@ -283,7 +283,7 @@ start.addEventListener('click', getInfo);
 /*Borrar item del carrito*/
 
 function deleteClick(){
-  if (itemToDelete == document.querySelectorAll(".delete-icon")) {
+  if (itemToDelete > 0) {
     itemToDelete.forEach((itemDel) => {
       itemDel.addEventListener('click', function(){
         let id = itemDel.closest(".item").getAttribute("id");
