@@ -170,6 +170,7 @@ input.username {
 #myOrder .item{
    border: 1px solid transparent;
    transition: 0.5s;
+  overflow: hidden;
 }
 
 #myOrder .item:hover{
