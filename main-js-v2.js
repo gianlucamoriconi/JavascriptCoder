@@ -8,12 +8,12 @@ let itemToDelete = {};
 
 /*Funcion creadora de items en menú*/
 
-function createItemInGrid(name, price, category, input, unique){
+function createItemInGrid(name, price, category, input, unique, imgUrl){
   let nameParsed = name.replace(/ /g, "-");
   let newLabel = document.createElement('label');
   newLabel.setAttribute('for', nameParsed);
-  newLabel.innerHTML = '<p class="item-name fs-7 fw-bold mb-0">'+name+'</p><p class="fs-7 fw-light mb-0 text-center">$'+price+'</p>';
-  newLabel.classList.add('item', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-3', 'fs-7');
+  newLabel.innerHTML = `<div class="img-item"><img src="${imgUrl}"></div><div class="info-item"><p class="item-name fs-7 fw-bold mb-0 mt-2">${name}</p><p class="fs-7 fw-light mb-0 text-center">${price}</p></div>`;
+  newLabel.classList.add('item', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-2', 'fs-7');
   newLabel.style.cursor = 'pointer';
   let newInput = document.createElement('input');
   newInput.setAttribute('type', input);
@@ -175,6 +175,7 @@ let saveSelectionFunction = function saveSelection(){
 
   //Guardamos el precio total de la orden
   let totalPrice = document.querySelector("#myOrder .cart-total").getAttribute("total-price");
+  totalPrice = Number(totalPrice);
   sandwichSaved.totalPrice.push(totalPrice);
 
   //Guardamos los items elegidos
@@ -202,6 +203,8 @@ if (orderExist != null) {
   document.getElementById("actions-home").append(orderExistButton);
 }
 
+
+/*Seleeccion de items*/
 
 function isSelected(item, category){
   console.log(item);
@@ -252,16 +255,17 @@ const getInfo = () => {
           let typeOfIngredient = data[i].tipo.toLowerCase();
           let nameOfIngredient = opciones[z].name;
           let priceOfIngredient = opciones[z].price;
+          let imgUrl = opciones[z].imgUrl;
 
           if (data[i].aceptaVariasOpciones == false) {
             let typeOfInput = "checkbox";
             let unique = "true";
-            createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique);
+            createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique, imgUrl);
           }
           else if (data[i].aceptaVariasOpciones == true) {
             let typeOfInput = "checkbox";
             let unique = "false";
-            createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique);
+            createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique, imgUrl);
           }
         }
       }
