@@ -76,7 +76,7 @@ function seeSelection(){
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
   for (var i = 0; i < optionsSelected.length; i++) {
-    let name = optionsSelected[i].closest("label").querySelector("item-name").innerText;
+    let name = optionsSelected[i].closest("label").querySelector(".item-name").innerText;
     let price = optionsSelected[i].getAttribute("data-price");
     let category = optionsSelected[i].getAttribute("category");
     selection(name, price, category);
