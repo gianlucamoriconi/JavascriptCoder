@@ -119,8 +119,9 @@ a{
   transition: 0.2s; */
 }
 
-.container-order{
+.content-order{
   overflow-y: auto;
+  height: 55vh;
 }
 
 #myOrder {
