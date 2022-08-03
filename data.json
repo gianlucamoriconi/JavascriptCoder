@@ -35,7 +35,7 @@
       {
         "name": "vacío",
         "price": 800,
-        "imgUrl": "./media/images/vacio.jpeg"
+        "imgUrl": "./media/images/vacio.jpg"
       },
       {
         "name": "bondiola",
@@ -58,17 +58,17 @@
       {
         "name": "cheddar",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/cheddar.jpg"
       },
       {
         "name": "provoleta",
         "price": 120,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/provoleta.jpg"
       },
       {
         "name": "dambo",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/dambo.jpg"
       }
     ],
     "tipo": "queso"
@@ -80,32 +80,32 @@
     "opciones": [
       {
         "name": "sal",
-        "price": 100,
+        "price": 0,
         "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "limón",
-        "price": 120,
+        "price": 0,
         "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "aceite de oliva",
-        "price": 100,
+        "price": 0,
         "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "mayonesa",
-        "price": 100,
+        "price": 0,
         "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "ketchup",
-        "price": 100,
+        "price": 0,
         "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
         "name": "mostaza dulce",
-        "price": 100,
+        "price": 0,
         "imgUrl": "./media/images/sandwich-loading.jpg"
       },
       {
