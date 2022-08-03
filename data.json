@@ -12,12 +12,12 @@
       {
         "name": "baguette",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/baguette.jpg"
       },
       {
         "name": "focaccia",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/pan-de-pizza.jpg"
       }
     ],
     "tipo": "pan"
@@ -30,22 +30,22 @@
       {
         "name": "asado",
         "price": 800,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/asado.jpg"
       },
       {
         "name": "vacío",
         "price": 800,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/vacio.jpeg"
       },
       {
         "name": "bondiola",
         "price": 800,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/bondiola.jpg"
       },
       {
         "name": "pollo",
         "price": 400,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/pollo.jpg"
       }
     ],
     "tipo": "carne"
