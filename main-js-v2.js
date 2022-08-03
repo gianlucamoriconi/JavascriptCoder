@@ -163,10 +163,15 @@ let saveSelectionFunction = function saveSelection(){
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
   if (optionsSelected.length < 2) {
-    swal("Ey!", "Todavía te falta completar el sandiwich", "error");
+    swal("¡Ey!", "Todavía te falta completar el sandiwich", "error");
   }
 
   else {
+    swal({
+      title: "¡Buen sandwich!",
+      text: "¿Querés confirmarlo?",
+      icon: "./media/images/oh-wow.gif",
+    });
     for (var i = 0; i < optionsSelected.length; i++) {
       let name = optionsSelected[i].getAttribute("name");
       let category = optionsSelected[i].getAttribute("category");
