@@ -35,7 +35,7 @@
       {
         "name": "vacío",
         "price": 800,
-        "imgUrl": "./media/images/vacio.jpeg"
+        "imgUrl": "./media/images/vacio.jpg"
       },
       {
         "name": "bondiola",
@@ -81,42 +81,42 @@
       {
         "name": "sal",
         "price": 0,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/sal.jpg"
       },
       {
         "name": "limón",
         "price": 0,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/limon.jpg"
       },
       {
         "name": "aceite de oliva",
         "price": 0,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/aceite-de-oliva.jpg"
       },
       {
         "name": "mayonesa",
         "price": 0,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/mayonesa.jpg"
       },
       {
         "name": "ketchup",
         "price": 0,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/ketchup.jpg"
       },
       {
         "name": "mostaza dulce",
         "price": 0,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/mostaza-dulce.jpg"
       },
       {
         "name": "salsa criolla",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/salsa-criolla.jpg"
       },
       {
         "name": "chimichurri",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/chimichurri.jpg"
       }
     ],
     "tipo": "salsa-condimento"
