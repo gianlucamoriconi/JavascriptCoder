@@ -1,4 +1,3 @@
-
 /*
 
 Funcion creadora de items en menú
@@ -58,6 +57,9 @@ function selection(name, price, category, imgUrl){
   sumOfItems();
 }
 
+
+let itemToDelete = {};
+
 function seeSelection(){
 
   if (document.querySelectorAll(".content-order .item")) {
@@ -68,7 +70,6 @@ function seeSelection(){
   }
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
-  let itemToDelete = {};
 
   for (var i = 0; i < optionsSelected.length; i++) {
     let name = optionsSelected[i].closest("label").querySelector(".item-name").innerText;
@@ -214,7 +215,7 @@ if (orderExist != null) {
 }
 
 
-/*Seleeccion de items*/
+/*Seleccion de items*/
 
 function isSelected(item, category){
   if (item.checked) {
