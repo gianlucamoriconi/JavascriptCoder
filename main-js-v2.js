@@ -172,7 +172,8 @@ let saveSelectionFunction = function saveSelection(){
       text: "¿Querés confirmarlo?",
       buttons: true,
       icon: "./media/images/oh-wow.gif",
-    }).then(result => {
+    }).then((ok) => {
+      if (ok) {
         for (var i = 0; i < optionsSelected.length; i++) {
           let name = optionsSelected[i].getAttribute("name");
           let category = optionsSelected[i].getAttribute("category");
@@ -195,9 +196,7 @@ let saveSelectionFunction = function saveSelection(){
       else {
         swal("¡Ok! Continúa con el armado");
       }
-    );
-
-
+    });
   }
 }
 
