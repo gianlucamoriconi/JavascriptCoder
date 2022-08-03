@@ -3,9 +3,6 @@
 
 let itemToDelete = {};
 
-
-
-
 /*Funcion creadora de items en menú*/
 
 function createItemInGrid(name, price, category, input, unique, imgUrl){
@@ -77,14 +74,16 @@ function seeSelection(){
   }
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
-  for (var i = 0; i < optionsSelected.length; i++) {
-    let name = optionsSelected[i].closest("label").querySelector(".item-name").innerText;
-    let price = optionsSelected[i].getAttribute("data-price");
-    let category = optionsSelected[i].getAttribute("category");
-    let imgUrl = optionsSelected[i].closest("label").querySelector(".img-item img").getAttribute("src");
+
+  optionsSelected.map(funtion(option){
+    let name = option[i].closest("label").querySelector(".item-name").innerText;
+    let price = option[i].getAttribute("data-price");
+    let category = option[i].getAttribute("category");
+    let imgUrl = option[i].closest("label").querySelector(".img-item img").getAttribute("src");
     selection(name, price, category, imgUrl);
     itemToDelete = document.querySelectorAll(".delete-icon");
-  }
+  });
+  
   sumOfItems();
 }
 
