@@ -1,9 +1,10 @@
 
-/*Variables globales*/
+/*
 
-let itemToDelete = {};
+Funcion creadora de items en menú
+La información para los párametros es obtenida por la constante getInfo a través de un fetch
 
-/*Funcion creadora de items en menú*/
+*/
 
 function createItemInGrid(name, price, category, input, unique, imgUrl){
   let nameParsed = name.replace(/ /g, "-");
@@ -18,16 +19,7 @@ function createItemInGrid(name, price, category, input, unique, imgUrl){
   newInput.setAttribute('id', nameParsed);
   newInput.setAttribute('data-price', price);
   newInput.setAttribute('unique', unique);
-
-  /*
-  Usamos el mismo valor de "name", para hacer que un input sea excluyente de los demás.
-  Ejemplo, no se pueden elegir dos tipos de pan para el mismo sanguche, entonces haremos que los
-  inputs de pan lleven todos el mismo "name" otorgandole como valor su propiedad "tipo" que es "Pan".
-  */
   newInput.setAttribute('name', name);
-
-  //El atributo category lo inventamos para categorizar los inputs
-  //nos servirá para armar la orden.
   newInput.setAttribute('category', category);
   newLabel.append(newInput);
   document.getElementById(category).querySelector(".container-items").append(newLabel);
@@ -67,6 +59,7 @@ function selection(name, price, category, imgUrl){
 }
 
 function seeSelection(){
+
   if (document.querySelectorAll(".content-order .item")) {
     let itemsInList = document.querySelectorAll(".content-order .item");
     for (var i = 0; i < itemsInList.length; i++) {
@@ -75,6 +68,7 @@ function seeSelection(){
   }
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
+  let itemToDelete = {};
 
   for (var i = 0; i < optionsSelected.length; i++) {
     let name = optionsSelected[i].closest("label").querySelector(".item-name").innerText;
@@ -131,7 +125,6 @@ start.addEventListener('click', saveName);
 
 //Si existe y quiere cambiarlo, podrá hacerlo haciendo click sobre el nombre
 let editName = function editName(){
-  // console.log("Click para editName funciona");
   var currentUserName = document.getElementById("userName").innerText;
   var newInput = document.createElement("input");
   newInput.classList.add("username", "color-light", "fw-bold");
@@ -224,9 +217,6 @@ if (orderExist != null) {
 /*Seleeccion de items*/
 
 function isSelected(item, category){
-  console.log(item);
-  console.log(category);
-
   if (item.checked) {
     item.closest("label").classList.add('selected');
 
@@ -238,7 +228,6 @@ function isSelected(item, category){
   if (item.getAttribute("unique") == "true") {
     let itemsWithSameCategory = item.closest(`#${category}`);
     itemsWithSameCategory = itemsWithSameCategory.querySelectorAll(`input[category='${category}']`);
-    console.log(itemsWithSameCategory);
     itemsWithSameCategory.forEach((x) => {
       if (x != item) {
         x.checked = false;
@@ -304,7 +293,6 @@ const getInfo = () => {
         item.addEventListener('click', function(){
           let itemSelected = this;
           let categoryOfSelected = this.getAttribute("category");
-          console.log(categoryOfSelected);
           isSelected(itemSelected, categoryOfSelected);
         });
         item.addEventListener('click', seeSelection);
@@ -319,6 +307,7 @@ start.addEventListener('click', getInfo);
 /*Borrar item del carrito*/
 
 function deleteClick(){
+  //Si existe el elemento de eliminar en la orden, escuchamos el click en ellos
   if (itemToDelete.length > 0) {
     itemToDelete.forEach((itemDel) => {
       itemDel.addEventListener('click', function(){
@@ -329,13 +318,17 @@ function deleteClick(){
   }
 }
 
+
+//Remover item de la orden luego de que hacen click en borrar (columna #myOrder)
 function deleteItemFromCart(itemId){
   document.querySelector(`#pickingTable .item input#${itemId}`).checked = false;
   document.querySelector(`#pickingTable .item input#${itemId}`).closest("label").classList.remove('selected');
+  //luego de borrar, actualizamos el carrito (items seleccionados y recalculamos el total)
   seeSelection();
   sumOfItems();
 }
 
+/*Usamos MutationObserver para detectar el cambio en los elementos selecionados */
 const observer = new MutationObserver((mutation) => {
    if (mutation) {
      setTimeout(() => {
@@ -347,4 +340,3 @@ const observer = new MutationObserver((mutation) => {
    subtree: true,
    childList: true,
  });
-
