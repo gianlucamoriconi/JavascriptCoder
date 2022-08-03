@@ -1,3 +1,4 @@
+
 /*Variables globales*/
 
 let itemToDelete = {};
@@ -162,7 +163,11 @@ let saveSelectionFunction = function saveSelection(){
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
   if (optionsSelected.length < 2) {
-    swal("¡Ey!", "Todavía te falta completar el sandiwich", "error", "./media/images/what-ross.gif");
+    swal({
+      title: "¡Ey!",
+      text: "Todavía te falta completar el sandiwich",
+      icon: "./media/images/what-ross.gif",
+    });
   }
 
   else {
@@ -342,3 +347,4 @@ const observer = new MutationObserver((mutation) => {
    subtree: true,
    childList: true,
  });
+
