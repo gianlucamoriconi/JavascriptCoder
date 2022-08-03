@@ -151,13 +151,13 @@ sandwichSaved = {
 let saveSelectionFunction = function saveSelection(){
   if (sandwichSaved.items.length >= 1) {
     for (let i = sandwichSaved.items.length; i > 0; i--) {
-      sandwichSaved.pop();
+      sandwichSaved.items.pop();
     }
   }
 
   if (sandwichSaved.totalPrice.length >= 1) {
     for (let i = sandwichSaved.totalPrice.length; i > 0; i--) {
-      sandwichSaved.pop();
+      sandwichSaved.totalPrice.pop();
     }
   }
 
