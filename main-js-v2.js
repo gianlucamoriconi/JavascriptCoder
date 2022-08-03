@@ -1,4 +1,5 @@
 
+
 /*Variables globales*/
 
 let itemToDelete = {};
@@ -10,7 +11,7 @@ function createItemInGrid(name, price, category, input, unique, imgUrl){
   let newLabel = document.createElement('label');
   newLabel.setAttribute('for', nameParsed);
   newLabel.setAttribute('data-price', price);
-  newLabel.innerHTML = `<div class="img-item"><img src="${imgUrl}"></div><div class="info-item"><p class="item-name fs-7 fw-bold mb-0 mt-2 text-center">${name}</p><p class="fs-7 fw-light mb-0 text-center">$${price}</p></div>`;
+  newLabel.innerHTML = `<div class="img-item"><img src="${imgUrl}"></div><div class="info-item"><p class="item-name fs-7 fw-bold mb-0 mt-2 text-center">${name}</p><p class="item-price fs-7 fw-light mb-0 text-center">$${price}</p></div>`;
   newLabel.classList.add('item', 'shadow', 'bg-white', 'rounded-3', 'mb-4', 'me-2', 'p-2', 'fs-7');
   newLabel.style.cursor = 'pointer';
   let newInput = document.createElement('input');
