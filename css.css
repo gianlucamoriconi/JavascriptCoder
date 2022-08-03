@@ -156,12 +156,12 @@ a{
 
 .content-order{
   overflow-y: auto;
-  height: 55vh;
+  max-height: 45vh;
 }
 
 #myOrder {
   position: sticky;
-  top: 7vh;
+  top: 4vh;
 }
 
 #myOrder .container-order{
