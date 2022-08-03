@@ -149,8 +149,14 @@ sandwichSaved = {
 };
 
 let saveSelectionFunction = function saveSelection(){
-  if (sandwichSaved.length >= 1) {
-    for (let i = sandwichSaved.length; i > 0; i--) {
+  if (sandwichSaved.items.length >= 1) {
+    for (let i = sandwichSaved.items.length; i > 0; i--) {
+      sandwichSaved.pop();
+    }
+  }
+
+  if (sandwichSaved.totalPrice.length >= 1) {
+    for (let i = sandwichSaved.totalPrice.length; i > 0; i--) {
       sandwichSaved.pop();
     }
   }
@@ -215,7 +221,7 @@ if (orderExist != null) {
 }
 
 
-/*Seleccion de items*/
+/*Seleeccion de items*/
 
 function isSelected(item, category){
   if (item.checked) {
