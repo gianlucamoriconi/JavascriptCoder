@@ -170,25 +170,29 @@ let saveSelectionFunction = function saveSelection(){
     swal({
       title: "¡Buen sandwich!",
       text: "¿Querés confirmarlo?",
+      buttons: true,
       icon: "./media/images/oh-wow.gif",
-    });
-    for (var i = 0; i < optionsSelected.length; i++) {
-      let name = optionsSelected[i].getAttribute("name");
-      let category = optionsSelected[i].getAttribute("category");
-      sandwichSaved.items.push(name);
-  }
+    }).then(result => {
+        for (var i = 0; i < optionsSelected.length; i++) {
+          let name = optionsSelected[i].getAttribute("name");
+          let category = optionsSelected[i].getAttribute("category");
+          sandwichSaved.items.push(name);
+        }
 
-  //Guardamos el precio total de la orden
-  let totalPrice = document.querySelector("#myOrder .cart-total").getAttribute("total-price");
-  totalPrice = Number(totalPrice);
-  sandwichSaved.totalPrice.push(totalPrice);
+        //Guardamos el precio total de la orden
+        let totalPrice = document.querySelector("#myOrder .cart-total").getAttribute("total-price");
+        totalPrice = Number(totalPrice);
+        sandwichSaved.totalPrice.push(totalPrice);
 
-  //Guardamos los items elegidos
-  localStorage.setItem('sandwichSaved', JSON.stringify(sandwichSaved));
-  saveName();
+        //Guardamos los items elegidos
+        localStorage.setItem('sandwichSaved', JSON.stringify(sandwichSaved));
+        saveName();
 
-  //llevamos a la página de success
-  let goToOrder = window.location.href = "./success.html";
+        //llevamos a la página de success
+        let goToOrder = window.location.href = "./success.html";
+      });
+
+
   }
 }
 
