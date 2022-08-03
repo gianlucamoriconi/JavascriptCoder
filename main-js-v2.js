@@ -190,7 +190,12 @@ let saveSelectionFunction = function saveSelection(){
 
         //llevamos a la página de success
         let goToOrder = window.location.href = "./success.html";
-      });
+      }
+
+      else {
+        swal("¡Ok! Continúa con el armado");
+      }
+    );
 
 
   }
