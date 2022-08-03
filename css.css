@@ -215,3 +215,7 @@ input.username {
     height: auto;
 }
 
+
+.item[data-price="0"] .item-price {
+    display: none;
+}
