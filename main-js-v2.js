@@ -248,21 +248,21 @@ const getInfo = () => {
     if (!document.getElementById("pickingTable").classList.contains("loaded")) {
 
       data.map(function(element){
-        let opciones = element[i].opciones;
+        let opciones = element.opciones;
 
         opciones.map(function(opt){
-          opciones[z];
+          opt;
           let typeOfIngredient = element[i].tipo.toLowerCase();
-          let nameOfIngredient = opciones[z].name;
-          let priceOfIngredient = opciones[z].price;
-          let imgUrl = opciones[z].imgUrl;
+          let nameOfIngredient = opt.name;
+          let priceOfIngredient = opt.price;
+          let imgUrl = opt.imgUrl;
 
-          if (element[i].aceptaVariasOpciones == false) {
+          if (element.aceptaVariasOpciones == false) {
             let typeOfInput = "checkbox";
             let unique = "true";
             createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique, imgUrl);
           }
-          else if (element[i].aceptaVariasOpciones == true) {
+          else if (element.aceptaVariasOpciones == true) {
             let typeOfInput = "checkbox";
             let unique = "false";
             createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique, imgUrl);
