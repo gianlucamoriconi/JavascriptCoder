@@ -252,7 +252,7 @@ const getInfo = () => {
 
         opciones.map(function(opt){
           opt;
-          let typeOfIngredient = element[i].tipo.toLowerCase();
+          let typeOfIngredient = element.tipo.toLowerCase();
           let nameOfIngredient = opt.name;
           let priceOfIngredient = opt.price;
           let imgUrl = opt.imgUrl;
