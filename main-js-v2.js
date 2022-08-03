@@ -1,4 +1,5 @@
 
+
 /*Variables globales*/
 
 let itemToDelete = {};
@@ -75,7 +76,7 @@ function seeSelection(){
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
 
-  optionsSelected.map(funtion(option){
+  optionsSelected.map(function(option){
     let name = option[i].closest("label").querySelector(".item-name").innerText;
     let price = option[i].getAttribute("data-price");
     let category = option[i].getAttribute("category");
@@ -83,7 +84,7 @@ function seeSelection(){
     selection(name, price, category, imgUrl);
     itemToDelete = document.querySelectorAll(".delete-icon");
   });
-  
+
   sumOfItems();
 }
 
