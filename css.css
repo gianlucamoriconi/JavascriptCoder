@@ -219,3 +219,7 @@ input.username {
 .item[data-price="0"] .item-price {
     display: none;
 }
+
+.swal-icon.swal-icon--custom img {
+    max-height: 300px;
+}
