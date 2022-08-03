@@ -129,57 +129,57 @@
       {
         "name": "lechuga",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/lechuga.jpg"
       },
       {
         "name": "tomate",
         "price": 120,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/tomate.jpg"
       },
       {
         "name": "aceitunas negras",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/aceitunas-negras.jpg"
       },
       {
         "name": "aceitunas verdes",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/aceitunas-verdes.jpg"
       },
       {
         "name": "pepino",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/pepino.jpg"
       },
       {
-        "name": "pepinillo en vinagre",
+        "name": "pepinillos en vinagre",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/pepinillos-en-vinagre.jpg"
       },
       {
         "name": "rúcula",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/rucula.jpg"
       },
       {
         "name": "repollo",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/repollo.jpg"
       },
       {
         "name": "tomate cherry",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/tomates-cherry.jpg"
       },
       {
         "name": "huevo duro",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/huevo-duro.jpg"
       },
       {
         "name": "huevo frito",
         "price": 100,
-        "imgUrl": "./media/images/sandwich-loading.jpg"
+        "imgUrl": "./media/images/huevo-frito.jpg"
       }
     ],
     "tipo": "vegetales-y-otros"
