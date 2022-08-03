@@ -1,5 +1,4 @@
 
-
 /*Variables globales*/
 
 let itemToDelete = {};
@@ -76,15 +75,14 @@ function seeSelection(){
 
   let optionsSelected = document.querySelectorAll(".container-items input:checked");
 
-  optionsSelected.map(function(option){
-    let name = option[i].closest("label").querySelector(".item-name").innerText;
-    let price = option[i].getAttribute("data-price");
-    let category = option[i].getAttribute("category");
-    let imgUrl = option[i].closest("label").querySelector(".img-item img").getAttribute("src");
+  for (var i = 0; i < optionsSelected.length; i++) {
+    let name = optionsSelected[i].closest("label").querySelector(".item-name").innerText;
+    let price = optionsSelected[i].getAttribute("data-price");
+    let category = optionsSelected[i].getAttribute("category");
+    let imgUrl = optionsSelected[i].closest("label").querySelector(".img-item img").getAttribute("src");
     selection(name, price, category, imgUrl);
     itemToDelete = document.querySelectorAll(".delete-icon");
-  });
-
+  }
   sumOfItems();
 }
 
@@ -248,28 +246,31 @@ const getInfo = () => {
     infoIngredients = data;
     document.getElementById("menu").classList.add("d-flex");
     if (!document.getElementById("pickingTable").classList.contains("loaded")) {
-      for (var i = 0; i < data.length; i++) {
-        let opciones = data[i].opciones;
 
-        for (var z = 0; z < opciones.length; z++) {
+      data.map(function(element){
+        let opciones = element[i].opciones;
+
+        opciones.map(function(opt){
           opciones[z];
-          let typeOfIngredient = data[i].tipo.toLowerCase();
+          let typeOfIngredient = element[i].tipo.toLowerCase();
           let nameOfIngredient = opciones[z].name;
           let priceOfIngredient = opciones[z].price;
           let imgUrl = opciones[z].imgUrl;
 
-          if (data[i].aceptaVariasOpciones == false) {
+          if (element[i].aceptaVariasOpciones == false) {
             let typeOfInput = "checkbox";
             let unique = "true";
             createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique, imgUrl);
           }
-          else if (data[i].aceptaVariasOpciones == true) {
+          else if (element[i].aceptaVariasOpciones == true) {
             let typeOfInput = "checkbox";
             let unique = "false";
             createItemInGrid(nameOfIngredient, priceOfIngredient, typeOfIngredient, typeOfInput, unique, imgUrl);
           }
-        }
-      }
+
+        });
+
+      });
 
       document.getElementById("pickingTable").classList.add("loaded");
       location.hash = "#menu";
